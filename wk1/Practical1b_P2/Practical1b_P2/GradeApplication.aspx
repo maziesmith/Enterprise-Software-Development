@@ -84,7 +84,7 @@
         <br />
         <asp:Button ID="btngrade" runat="server" OnClick="btngrade_Click" Text="Process Grades" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnreset" runat="server" Text="Reset" />
+        <asp:Button ID="btnreset" runat="server" Text="Reset" OnClick="btnreset_Click" />
         <br />
         <br />
         <br />

@@ -35,6 +35,7 @@ namespace Practical1b_P2.BLL
             catch(FormatException fe)
             {
                 //error msg
+                Response.Write("<script>alert('Format exception error')</script>");
             }
             // Compute sum, avg, min and max 
             Double sum = s1 + s2 + s3 + s4 + s5;
@@ -246,6 +247,32 @@ namespace Practical1b_P2.BLL
                 lblpass5.Text = p5;
             }
 
+        }
+
+        protected void btnreset_Click(object sender, EventArgs e)
+        {
+            // clear student input boxes 
+            tbstud1.Text = "";
+            tbstud2.Text = "";
+            tbstud3.Text = "";
+            tbstud4.Text = "";
+            tbstud5.Text = "";
+            // clear scores 
+            lblavg.Text = "";
+            lblavg0.Text = "";
+            lblavg1.Text = "";
+            // clear grades
+            lblstud1grade.Text = "";
+            lblstud2grade.Text = "";
+            lblstud3grade.Text = "";
+            lblstud4grade.Text = "";
+            lblstud5grade.Text = "";
+            // clear status 
+            lblpass1.Text = "";
+            lblpass2.Text = "";
+            lblpass3.Text = "";
+            lblpass4.Text = "";
+            lblpass5.Text = "";
         }
     }
 }
