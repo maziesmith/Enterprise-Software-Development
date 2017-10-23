@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ex2.aspx" />
+    <Content Include="Ex3.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -126,6 +127,13 @@
     </Compile>
     <Compile Include="Ex2.aspx.designer.cs">
       <DependentUpon>Ex2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ex3.aspx.cs">
+      <DependentUpon>Ex3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ex3.aspx.designer.cs">
+      <DependentUpon>Ex3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
