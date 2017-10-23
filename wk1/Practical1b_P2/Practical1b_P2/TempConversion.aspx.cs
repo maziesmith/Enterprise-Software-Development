@@ -29,6 +29,7 @@ namespace Practical1b_P2
                 catch (FormatException fe)
                 {
                     // show alert 
+                    Response.Write("<script>alert('Format exception error')</script>");
                 }
 
             }
@@ -44,6 +45,7 @@ namespace Practical1b_P2
                 catch (FormatException fe)
                 {
                     // show alert
+                    Response.Write("<script>alert('Format exception error')</script>");
                 }
 
             }
