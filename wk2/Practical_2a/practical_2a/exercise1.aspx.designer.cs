@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace practical_2a {
+namespace practical_2a.Account {
     
     
-    public partial class exercise1 {
+    public partial class Exercise1 {
         
         /// <summary>
         /// Label1 control.
