@@ -1,0 +1,9 @@
+C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb

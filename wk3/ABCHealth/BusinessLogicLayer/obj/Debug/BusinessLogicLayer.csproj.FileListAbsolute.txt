@@ -1,9 +1,0 @@
-C:\Users\Anon\source\repos\ABCHealth\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
-C:\Users\Anon\source\repos\ABCHealth\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
-C:\Users\Anon\source\repos\ABCHealth\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
-C:\Users\Anon\source\repos\ABCHealth\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
-C:\Users\Anon\source\repos\ABCHealth\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll.config
-C:\Users\Anon\source\repos\ABCHealth\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
-C:\Users\Anon\source\repos\ABCHealth\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
-C:\Users\Anon\source\repos\ABCHealth\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
-C:\Users\Anon\source\repos\ABCHealth\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
