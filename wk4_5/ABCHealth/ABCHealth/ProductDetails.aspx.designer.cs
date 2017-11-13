@@ -10,33 +10,42 @@
 namespace ABCHealth {
     
     
-    public partial class SiteMaster {
+    public partial class ProductDetails {
         
         /// <summary>
-        /// site_title control.
+        /// lbl_ProdName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label site_title;
+        protected global::System.Web.UI.WebControls.Label lbl_ProdName;
         
         /// <summary>
-        /// FeaturedContent control.
+        /// lbl_ProdDesc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder FeaturedContent;
+        protected global::System.Web.UI.WebControls.Label lbl_ProdDesc;
         
         /// <summary>
-        /// MainContent control.
+        /// lbl_Price control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Label lbl_Price;
+        
+        /// <summary>
+        /// btn_Add_To_Cart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Add_To_Cart;
     }
 }

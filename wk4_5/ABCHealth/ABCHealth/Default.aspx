@@ -1,5 +1,15 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ABCHealth._Default" %>
 
+<asp:Content ContentPlaceHolderID="FeaturedContent" ID="FeaturedContent" runat="server">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Your friendly neighbourhood Drug store</h1>
+            </hgroup>
+        </div>
+    </section>
+</asp:Content>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
