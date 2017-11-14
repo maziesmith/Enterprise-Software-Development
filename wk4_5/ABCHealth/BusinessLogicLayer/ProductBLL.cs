@@ -46,7 +46,7 @@ namespace BusinessLogicLayer
             int result = 0;
 
             Product PDAL = new Product();
-            result = PDALProductDelete(ID);
+            result = PDAL.ProductDelete(ID);
 
             if (result == 1)
             {

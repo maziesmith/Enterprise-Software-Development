@@ -43,7 +43,22 @@ namespace DataAccessLayer
             conn.Close();
             return result;
         }
+        // ProductDelete Function 
+        public int ProductDelete(decimal ID)
+        {
+            string queryStr = "DELETE FROM Product WHERE Product_ID=@ID";
+            // decimal ID_Dec = Convert to Decimal(ID);
 
+            SqlConnection conn = new SqlConnection(_connStr);
+            SqlCommand cmd = new SqlCommand(queryStr, conn);
+            cmd.Parameters.AddWithValue("@ID", ID);
+            conn.Open();
+            int noofRow = 0;
+            noofRow = cmd.ExecuteNonQuery();
+            conn.Close();
+
+            return noofRow;
+        }// End of Delete
 
         // Constructor that take in all data required to build a Product object
         public Product(decimal prodID, string prodName, string prodDesc,

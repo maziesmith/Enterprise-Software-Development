@@ -35,5 +35,15 @@ namespace ABCHealth
             // e.g. ProductDetails.aspx?ProdID=1
             Response.Redirect("ProductDetails.aspx?ProdID=" + prodID);
         }
+
+        protected void gvProduct_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            // Get the currently selected row. 
+            GridViewRow row = gvProduct.SelectedRow;
+
+            // Extract ProductID from Selected item 
+            string prodID = row.Cells[0].Text;
+            //ProductDelete
+        }
     }
 }
