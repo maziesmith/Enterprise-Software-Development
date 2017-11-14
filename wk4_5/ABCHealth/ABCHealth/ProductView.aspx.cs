@@ -38,12 +38,17 @@ namespace ABCHealth
 
         protected void gvProduct_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            // Get the currently selected row. 
-            GridViewRow row = gvProduct.SelectedRow;
+            //decimal id = decimal.Parse(gvProduct.DataKeyNames[e.RowIndex].Value.ToString());
 
-            // Extract ProductID from Selected item 
-            string prodID = row.Cells[0].Text;
-            //ProductDelete
+            // Get current selected row 
+            GridViewRow row = gvProduct.Rows[e.RowIndex];
+            
+            // Get ProductID from selected row 
+            decimal prodID = decimal.Parse(row.Cells[0].Text);
+            int rowleft = prodBLL.ProductDelete(prodID);
+
+            // Response message 
+            Response.Redirect("<scrit>alert('Data Save successfully')</script>");
         }
     }
 }

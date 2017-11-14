@@ -50,7 +50,7 @@ namespace BusinessLogicLayer
 
             if (result == 1)
             {
-                msg = "Product has been inserted successfully";
+                msg = "Product has been deleted sucessfully";
             }
             else
             {
