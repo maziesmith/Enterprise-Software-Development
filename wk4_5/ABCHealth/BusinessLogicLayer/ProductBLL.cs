@@ -23,6 +23,7 @@ namespace BusinessLogicLayer
 
             return allProduct;
         }
+        // Product insert function 
         public string ProductInsert(string _ProductName, string _ProductDesc, string _UnitPrice, string _Image, string _StockLevel)
         {
             string msg = null;
@@ -40,6 +41,7 @@ namespace BusinessLogicLayer
             }
             return msg;
         }
+        // Product Delete function 
         public int ProductDelete(decimal ID)
         {
             string msg = null;
@@ -58,5 +60,24 @@ namespace BusinessLogicLayer
             }
             return result;
         }// END Delete
+      
+        // Product Update function 
+        public string ProductUpdate(string _ProductID, string _ProductName, string _UnitPrice)
+        {
+            string msg = null;
+            int result = 0;
+
+            Product prod = new Product();
+            result = prod.ProductUpdate(_ProductID, _ProductName, Convert.ToDecimal(_UnitPrice));
+            if(result == 1)
+            {
+                msg = "Product has been updated successfully";
+            }
+            else
+            {
+                msg = "Error! Please try again";
+            }
+            return msg;
+        }// End Update
     }
 }

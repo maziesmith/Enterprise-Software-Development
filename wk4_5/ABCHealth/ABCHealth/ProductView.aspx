@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
-    <asp:GridView ID="gvProduct" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged" DataKeyNames="Product_ID" OnRowDeleting="gvProduct_RowDeleting">
+    <asp:GridView ID="gvProduct" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged" DataKeyNames="Product_ID" OnRowDeleting="gvProduct_RowDeleting" OnRowCancelingEdit="gvProduct_RowCancelingEdit" OnRowEditing="gvProduct_RowEditing" OnRowUpdating="gvProduct_RowUpdating">
         <Columns>
             <asp:BoundField DataField="Product_ID" HeaderText="Product Ref" />
             <asp:TemplateField HeaderText="Image">
@@ -12,7 +12,7 @@
             </asp:TemplateField>
             <asp:BoundField DataField="Product_Name" HeaderText="Product Name" />
             <asp:BoundField DataField="Unit_Price" HeaderText="Unit Price" DataFormatString="{0:c}" />
-            <asp:CommandField ShowSelectButton="True" ShowDeleteButton="True" />
+            <asp:CommandField ShowSelectButton="True" ShowDeleteButton="True" ShowEditButton="True" />
         </Columns>
 </asp:GridView>
 </asp:Content>

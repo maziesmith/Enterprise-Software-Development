@@ -59,6 +59,28 @@ namespace DataAccessLayer
 
             return noofRow;
         }// End of Delete
+        
+        // Product Update function 
+        public int ProductUpdate(string pId, string pName, decimal pUnitPrice)
+        {
+            string queryStr = "UPDATE Product SET" +
+                " Product_Name=@productName, " +
+                " Unit_Price = @unitPrice " +
+                " WHERE (Product_ID=@productID)";
+
+            SqlConnection conn = new SqlConnection(_connStr);
+            SqlCommand cmd = new SqlCommand(queryStr, conn);
+            cmd.Parameters.AddWithValue("@productID", pId);
+            cmd.Parameters.AddWithValue("@productName", pName);
+            cmd.Parameters.AddWithValue("@unitPrice", pUnitPrice);
+
+            conn.Open();
+            int nofRow = 0;
+            nofRow = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return nofRow;
+        }//End of Update
 
         // Constructor that take in all data required to build a Product object
         public Product(decimal prodID, string prodName, string prodDesc,
