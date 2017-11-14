@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %>- My ASP.NET Application</title>
+    <title><%: Page.Title %>- E Store Web Application</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -38,6 +38,28 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">
+                        <a runat="server" href="~/">E Store Web Application</a>
+                    </p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                      
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li><a runat="server" href="~/">Home</a></li>
+                              <li><a runat="server" href="~/About">About</a></li>
+                              <li><a runat="server" href="~/ProductView">Product View</a></li>
+                              <li><a runat="server" href="~/Contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -68,7 +90,11 @@
          
             <hr />
             <footer>
-                <p>&copy; <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>- My ASP.NET Application</p>
+               <div class="content-wrapper">
+                   <div class="float-left">
+                       <p>%copy;<%:DateTime.Now.Year %> - E Store Love Drugs </p>
+                   </div>
+               </div>
             </footer>
         </div>
 
