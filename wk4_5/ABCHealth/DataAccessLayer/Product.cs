@@ -21,6 +21,29 @@ namespace DataAccessLayer
         public Product()
         {
         }
+        // ProductInsert Function
+        public int ProductInsert()
+        {
+            int result = 0;
+            string queryStr = "INSERT INTO Product(Product_Name, Product_Desc, Unit_Price, Product_Image, Stock_Level)"
+                + "values (@Product_Name, @Product_Desc, @Unit_Price, @Product_Image, @Stock_Level)";
+            SqlConnection conn = new SqlConnection(_connStr);
+            SqlCommand cmd = new SqlCommand(queryStr, conn);
+
+            //cmd.Parameters.AddwithValue("@Product_ID, this.ProductID);
+            cmd.Parameters.AddWithValue("@Product_Name", this.Product_Name);
+            cmd.Parameters.AddWithValue("@Product_Desc", this.Product_Desc);
+            cmd.Parameters.AddWithValue("@Unit_Price", this.Unit_Price);
+            cmd.Parameters.AddWithValue("@Product_Image", this.Product_Image);
+            cmd.Parameters.AddWithValue("@Stock_Level", this.Stock_Level);
+
+            conn.Open();
+            result += cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return result;
+        }
+
 
         // Constructor that take in all data required to build a Product object
         public Product(decimal prodID, string prodName, string prodDesc,
@@ -165,5 +188,7 @@ namespace DataAccessLayer
 
             return prodAll;
         }
+       
     }
+    
 }

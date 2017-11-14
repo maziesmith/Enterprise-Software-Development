@@ -4,3 +4,4 @@ C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHe
 C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Thomas\Documents\git-thomas\Enterprise-Software-Development\wk4_5\ABCHealth\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache

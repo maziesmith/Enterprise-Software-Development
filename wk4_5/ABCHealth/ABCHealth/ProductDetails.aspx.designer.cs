@@ -13,6 +13,15 @@ namespace ABCHealth {
     public partial class ProductDetails {
         
         /// <summary>
+        /// img_Product control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_Product;
+        
+        /// <summary>
         /// lbl_ProdName control.
         /// </summary>
         /// <remarks>
@@ -47,5 +56,14 @@ namespace ABCHealth {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_Add_To_Cart;
+        
+        /// <summary>
+        /// btn_back control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_back;
     }
 }

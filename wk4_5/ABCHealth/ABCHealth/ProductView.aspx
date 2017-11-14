@@ -5,8 +5,13 @@
     <asp:GridView ID="gvProduct" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="gvProduct_SelectedIndexChanged">
         <Columns>
             <asp:BoundField DataField="Product_ID" HeaderText="Product Ref" />
+            <asp:TemplateField HeaderText="Image">
+                <ItemTemplate>
+                    <asp:Image ID="Image1" runat="server" Width="60px" ImageUrl='<%# "~/Images/" + Eval("Product_Image") %>' />
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:BoundField DataField="Product_Name" HeaderText="Product Name" />
-            <asp:BoundField DataField="Unit_Price" HeaderText="Unit Price" />
+            <asp:BoundField DataField="Unit_Price" HeaderText="Unit Price" DataFormatString="{0:c}" />
             <asp:CommandField ShowSelectButton="True" />
         </Columns>
 </asp:GridView>

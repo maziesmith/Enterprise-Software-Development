@@ -151,6 +151,7 @@
     <Content Include="Images\Vitamin-D.jpg" />
     <Content Include="Images\Vitamin.png" />
     <Content Include="ProductDetails.aspx" />
+    <Content Include="ProductInsert.aspx" />
     <Content Include="ProductView.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -219,6 +220,13 @@
     </Compile>
     <Compile Include="ProductDetails.aspx.designer.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductInsert.aspx.cs">
+      <DependentUpon>ProductInsert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductInsert.aspx.designer.cs">
+      <DependentUpon>ProductInsert.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductView.aspx.cs">
       <DependentUpon>ProductView.aspx</DependentUpon>
