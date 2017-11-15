@@ -1,13 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PatientUpdate.aspx.cs" Inherits="P10.PatientUpdate" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PatientDetails.aspx.cs" Inherits="P10.PatientDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<h1>UPDATE PATIENT DATA</h1>
+    <h1>PATIENT DETAILS</h1>
      <div>
         <table style="width: 100%;">
             <tr>
                 <td style="width: 162px">Patient Name:</td>
                 <td style="width: 216px">
                     <br />
-                    <asp:TextBox ID="tbPatientName" runat="server" Width="400px"></asp:TextBox>
+                    <asp:Label ID="lbPatientID" runat="server"></asp:Label>
+                    <br />
                     <br />
                 </td>
             </tr>
@@ -15,7 +16,7 @@
                 <td style="width: 162px">Patient ID:</td>
                 <td style="width: 216px">
                     <br />
-                    <asp:Label ID="lbPatientID" runat="server"></asp:Label>
+                    <asp:Label ID="lbPatientName" runat="server"></asp:Label>
                     <br />
                     <br />
                 </td>
@@ -55,7 +56,8 @@
                         <asp:ListItem>Singapore</asp:ListItem>
                     </asp:DropDownList>
                     <br />
-                    <asp:TextBox ID="tbPostalCode" runat="server" Width="150px"></asp:TextBox>
+                    <br />
+                    <asp:Label ID="lbPostalCode" runat="server"></asp:Label>
                     <br />
                 </td>
             </tr>
@@ -63,7 +65,8 @@
                 <td style="width: 162px">Contact Number:</td>
                 <td style="width: 216px">
                     <br />
-                    <asp:TextBox ID="tbContactNumber" runat="server" Width="200px"></asp:TextBox>
+                    <asp:Label ID="lbContactNumber" runat="server"></asp:Label>
+                    <br />
                     <br />
                 </td>
             </tr>
@@ -71,7 +74,8 @@
                 <td style="width: 162px">Email: </td>
                 <td style="width: 216px">
                     <br />
-                    <asp:TextBox ID="tbEmail" runat="server" Width="400px"></asp:TextBox>
+                    <asp:Label ID="lbEmail" runat="server"></asp:Label>
+                    <br />
                     <br />
                 </td>
             </tr>
@@ -84,9 +88,8 @@
             <tr>
                 <td style="width: 162px">&nbsp;</td>
                 <td style="width: 216px">
-                    <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
-&nbsp;<asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click" Text="Clear" />
-                </td>
+                    <asp:Button ID="btnBack" runat="server" OnClick="btnBack_Click" Text="Back" />
+&nbsp;</td>
             </tr>
         </table>
     </div>

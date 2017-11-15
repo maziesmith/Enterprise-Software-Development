@@ -48,10 +48,16 @@ namespace P10
                                                       ddlCitizenship.SelectedValue,
                                                       tbAddress.Text,
                                                       tbPostalCode.Text,
+                                                      ddlCountry.SelectedValue,
                                                       tbContactNumber.Text,
                                                       tbEmail.Text);
 
             lbMessage.Text = message;
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
