@@ -7,7 +7,7 @@
                 <td style="width: 162px">Patient Name:</td>
                 <td style="width: 216px">
                     <br />
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbPatientName" runat="server" Width="400px"></asp:TextBox>
                     <br />
                 </td>
             </tr>
@@ -15,19 +15,26 @@
                 <td style="width: 162px">Patient ID:</td>
                 <td style="width: 216px">
                     <br />
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbPatientID" runat="server" Width="400px"></asp:TextBox>
                     <br />
                 </td>
             </tr>
             <tr>
-                <td style="width: 162px">Gender:</td>
-                <td style="width: 216px">
-                    <br />
+                <td style="width: 162px; height: 86px">Gender:</td>
+                <td style="width: 216px; height: 86px">
+                    <asp:RadioButtonList ID="rblGender" runat="server" Height="68px" Width="161px">
+                        <asp:ListItem Value="m">Male</asp:ListItem>
+                        <asp:ListItem Value="f">Female </asp:ListItem>
+                    </asp:RadioButtonList>
                 </td>
             </tr>
             <tr>
                 <td style="width: 162px">Citizenship: </td>
                 <td style="width: 216px">
+                    <br />
+                    <asp:DropDownList ID="ddlCitizenship" runat="server" Height="25px" Width="200px">
+                        <asp:ListItem>Singapore</asp:ListItem>
+                    </asp:DropDownList>
                     <br />
                 </td>
             </tr>
@@ -35,7 +42,7 @@
                 <td style="width: 162px">Address:</td>
                 <td style="width: 216px">
                     <br />
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbAddress" runat="server" Height="50px" TextMode="MultiLine" Width="400px"></asp:TextBox>
                     <br />
                 </td>
             </tr>
@@ -43,17 +50,19 @@
                 <td style="width: 162px">Country/ Postal Code:</td>
                 <td style="width: 216px">
                     <br />
-                    <asp:DropDownList ID="DropDownList1" runat="server" Height="16px">
+                    <asp:DropDownList ID="ddlCountry" runat="server" Height="25px" Width="200px">
+                        <asp:ListItem>Singapore</asp:ListItem>
                     </asp:DropDownList>
-&nbsp;<asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                    <br />
+                    <asp:TextBox ID="tbPostalCode" runat="server" Width="150px"></asp:TextBox>
                     <br />
                 </td>
             </tr>
             <tr>
-                <td style="width: 162px">Contat Number:</td>
+                <td style="width: 162px">Contact Number:</td>
                 <td style="width: 216px">
                     <br />
-                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbContactNumber" runat="server" Width="200px"></asp:TextBox>
                     <br />
                 </td>
             </tr>
@@ -61,19 +70,22 @@
                 <td style="width: 162px">Email: </td>
                 <td style="width: 216px">
                     <br />
-                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbEmail" runat="server" Width="400px"></asp:TextBox>
                     <br />
                 </td>
             </tr>
             <tr>
                 <td style="width: 162px">
-                    <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                    <asp:Label ID="lbMessage" runat="server"></asp:Label>
                 </td>
                 <td style="width: 216px">&nbsp;</td>
             </tr>
             <tr>
                 <td style="width: 162px">&nbsp;</td>
-                <td style="width: 216px">&nbsp;</td>
+                <td style="width: 216px">
+                    <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
+&nbsp;<asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click" Text="Clear" />
+                </td>
             </tr>
         </table>
     </div>
