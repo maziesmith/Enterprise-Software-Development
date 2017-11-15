@@ -18,5 +18,22 @@ namespace P10
             gvPatient.DataSource = patients;
             gvPatient.DataBind();
         }
+
+        protected void gvPatient_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int rowNumber = int.Parse(e.CommandArgument.ToString());
+
+            GridViewRow gridViewRow = gvPatient.Rows[rowNumber];
+            String patientID = gridViewRow.Cells[0].Text;
+            
+            if(e.CommandName == "Select")
+            {
+
+            }
+            else if (e.CommandName == "Update")
+            {
+                Response.Redirect(String.Format("PatientUpdate.aspx?id={0}", patientID));
+            }
+        }
     }
 }

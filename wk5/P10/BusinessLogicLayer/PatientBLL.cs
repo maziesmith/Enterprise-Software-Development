@@ -58,6 +58,49 @@ namespace BusinessLogicLayer
             Patient patientIdv = new Patient();
             return patientIdv.GetPatient(patientID);
         }
+        public String UpdatePatient(String patientID, 
+                                    String patientName, 
+                                    String gender, 
+                                    String citizenship, 
+                                    String address, 
+                                    String postalCode, 
+                                    String country, 
+                                    String contactNo, 
+                                    String email)
+        {
+            // Invode a method to validate 
+            String message =
+                ValidateInput(patientID,
+                               patientName,
+                               gender,
+                               citizenship,
+                               address,
+                               postalCode,
+                               country,
+                               contactNo,
+                               email);
+            if (message.Length == 0)
+            {
+                // No error; proceed
+                Patient patient = 
+                    new Patient ( patientID,
+                               patientName,
+                               gender,
+                               citizenship,
+                               address,
+                               postalCode,
+                               country,
+                               contactNo,
+                               email);
+                int numberOfRows = 0;
+                numberOfRows = patient.UpdatePatient();
+                if (numberOfRows > 0)
+                    message = "Patient record updated successfully.";
+                else
+                    message = "Error! Please try again.";
+            }
+            return message;
+        }
         public String CreatePatient(String patientID,
                                     String patientName,
                                     String gender,
