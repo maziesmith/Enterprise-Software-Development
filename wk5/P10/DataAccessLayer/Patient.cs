@@ -113,6 +113,64 @@ namespace DataAccessLayer
 
             return numberOfRows;
         }
+        public int UpdatePatient()
+        {
+            String query =
+                " UPDATE Patient SET PatientName = @patientName, " +
+                " Gender = @gender, Citizenship = @citizenship, Address = @address, " +
+                " PostalCode = @postalCode, Country = @country, " +
+                " ContactNo = @contactNo, email = @email " +
+                " WHERE PatientID = @patientID";
+
+            int numberOfRows = 0;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@patientID", this.patientID);
+                    command.Parameters.AddWithValue("@patientName", this.patientName);
+
+                    connection.Open();
+                    numberOfRows = command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            return numberOfRows;
+        }
+        public Patient GetPatient(String patientID)
+        {
+            Patient patient = null;
+            String query = "SELECT * FROM Patient WHERE PatientID = @patientID ";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@patientID", patientID);
+
+                    connection.Open();
+                    SqlDataReader dataReader = command.ExecuteReader();
+
+                    if (dataReader.Read())
+                    {
+                        String patientName = dataReader["PatientName"].ToString();
+                        String gender = dataReader["Gender"].ToString();
+                        String citienship = dataReader["Citizenship"].ToString();
+                        String address = dataReader["Address"].ToString();
+                        String postalCode = dataReader["PostalCode"].ToString();
+                        String country = dataReader["Country"].ToString();
+                        String contactNo = dataReader["ContactNo"].ToString();
+
+                        patient = new Patient(patientID, patientName, gender, citienship
+                            , address, postalCode, country, contactNo);
+                    }
+                    connection.Close();
+                    dataReader.Close();
+                    dataReader.Dispose();
+                }
+            }
+            return patient;
+        }
         public List<Patient> GetAllPatient()
         {
             List<Patient> patients = new List<Patient>();

@@ -16,7 +16,48 @@ namespace BusinessLogicLayer
 
             return patients;
         }
+        private String ValidateInput(String patientID,
+                                     String patientName,
+                                     String gender,
+                                     String citizenship,
+                                     String postalCode,
+                                     String address,
+                                     String country,
+                                     String contactNo,
+                                     String email)
+        {
+            StringBuilder messageBuilder = new StringBuilder();
+            if (String.IsNullOrEmpty(patientID) || patientID.Length > 20)
+                messageBuilder.Append("Patient ID exceeds 20 chars!<br />");
+            if (String.IsNullOrEmpty(patientID) || patientID.Length == 0)
+                messageBuilder.Append("Patient ID cannot be blank!<br />");
+            if (patientName.Length > 30)
+                messageBuilder.Append("Patient Name cannot exceed 30 chars!<br />");
+            if (patientName.Length == 0)
+                messageBuilder.Append("Patient Names cannot be blank!<br/>");
+            if (address.Length > 50)
+                messageBuilder.Append("Address exceeds 50 chars!<br/>");
+            if (address.Length == 0)
+                messageBuilder.Append("Address cannot be blank!<br/>");
+            if (postalCode.Length > 10)
+                messageBuilder.Append("Postal Code exceeds 10 chars!<br/>");
+            if (postalCode.Length == 0)
+                messageBuilder.Append("Postal Code cannot be blank!<br/>");
+            if (contactNo.Length > 10)
+                messageBuilder.Append("Contact number exceeds 10 chars!<br/>");
+            if (contactNo.Length == 0)
+                messageBuilder.Append("Contact number cannot be blank!<br/>");
+            if (email.Length > 20)
+                messageBuilder.Append("Email exceeds 20 chars!<br/>");
 
+            return messageBuilder.ToString();
+
+        }
+        public Patient GetPatient(String patientID)
+        {
+            Patient patientIdv = new Patient();
+            return patientIdv.GetPatient(patientID);
+        }
         public String CreatePatient(String patientID,
                                     String patientName,
                                     String gender,
