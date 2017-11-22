@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ePhoneBook.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,18 +19,21 @@ namespace ePhoneBook.Controllers
                     phoneBookModels = new List<PhoneBookModel>();
                     phoneBookModels.Add(new PhoneBookModel
                     {
-                        FirstName = "Yong Kheng Neaven", 
-
+                        FirstName = "Yong Kheng Neaven",
+                        LastName = "Seo",
+                        Email = "neaven_seo@nyp.edu.sg",
+                        MobileNumber = "6550 1623"
                     }
                     );
                 }
                 return phoneBookModels;
+            }
         }
         
         // GET: PhoneBook
         public ActionResult Index()
         {
-            return View();
+            return View(PhoneBooks);
         }
 
         // GET: PhoneBook/Details/5
@@ -46,12 +50,12 @@ namespace ePhoneBook.Controllers
 
         // POST: PhoneBook/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(PhoneBookModel phoneBookModel)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                PhoneBooks.Add(phoneBookModel);
                 return RedirectToAction("Index");
             }
             catch
@@ -61,19 +65,20 @@ namespace ePhoneBook.Controllers
         }
 
         // GET: PhoneBook/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(String mobileNumber)
         {
-            return View();
+            return View(PhoneBooks.FirstOrDefault(pbm => String.Compare(pbm.MobileNumber,mobileNumber) == 0));
         }
 
         // POST: PhoneBook/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(String mobileNumber, PhoneBookModel phoneBookModel)
         {
             try
             {
                 // TODO: Add update logic here
-
+                PhoneBooks.Where(pbm => String.Compare(pbm.MobileNumber, mobileNumber) == 0)
+                    .ToList().ForEach(pbm => { pbm = phoneBookModel; });
                 return RedirectToAction("Index");
             }
             catch
@@ -83,9 +88,10 @@ namespace ePhoneBook.Controllers
         }
 
         // GET: PhoneBook/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(String mobileNumber)
         {
-            return View();
+            PhoneBooks.RemoveAll(pbm => String.Compare(pbm.MobileNumber, mobileNumber) == 0);
+            return RedirectToAction("Index");
         }
 
         // POST: PhoneBook/Delete/5
