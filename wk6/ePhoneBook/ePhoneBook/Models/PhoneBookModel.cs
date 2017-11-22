@@ -16,5 +16,18 @@ namespace ePhoneBook.Models
 
         [Display(Name = "Middle Name")]
         public String MiddleName { get; set; }
+
+        [Required]
+        [Display(Name = "Last Name")]
+        public String LastName { get; set; }
+
+        [Required]
+        [Display(Name = "Mobile")]
+        public String MobileNumber { get; set; }
+
+        [Required]
+        [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
+        public String Email { get; set; }
     }
 }
