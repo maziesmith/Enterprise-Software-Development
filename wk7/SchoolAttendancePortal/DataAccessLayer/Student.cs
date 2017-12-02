@@ -22,9 +22,7 @@ namespace DataAccessLayer
             SG, //Singapore
         }
 
-        //public string CitizenShip { get; set; }
-
-        private readonly String CONNECTION_STRING = Properties.Settings.Default.DBConnString;
+        private readonly String CONNECTION_STRING = "";
         public String AdminNumber { get; set; }
         public String Name { get; set; }
         public String Gender { get; set; }
@@ -66,20 +64,8 @@ namespace DataAccessLayer
                     }
                 }
             }
-            return result;
-        }
 
-        public Student(string adminNumber, string name, string gender, DateTime dob, string address, Nationality citizenship, string mobile, string email, string imageURL)
-        {
-            AdminNumber = adminNumber;
-            Name = name;
-            Gender = gender;
-            DateOfBirth = dob;
-            Address = address;
-            CitizenShip = citizenship;
-            MobileNumber = mobile;
-            SchoolEmail = email;
-            ImageURL = imageURL;
+            return result;
         }
         public int Delete(String adminNumber)
         {
@@ -87,10 +73,6 @@ namespace DataAccessLayer
             throw new NotImplementedException();
         }
 
-        public Student()
-        {
-
-        }
         public Student GetStudent(String adminNumber)
         {
             Student student = new Student();
