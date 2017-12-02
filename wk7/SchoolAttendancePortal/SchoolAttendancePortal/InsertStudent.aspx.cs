@@ -5,6 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+// Add References to DataAccessLayer and BusinessLogicLayer
+using BusinessLogicLayer;
+using DataAccessLayer;
 
 namespace SchoolAttendancePortal
 {
