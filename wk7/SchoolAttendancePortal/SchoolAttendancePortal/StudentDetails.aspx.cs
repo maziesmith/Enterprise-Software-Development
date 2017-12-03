@@ -32,7 +32,7 @@ namespace SchoolAttendancePortal
                 }
                 else
                 {
-                    statusLabel.Text = "Studetn not found"
+                    statusLabel.Text = "Studetn not found";
                 }
             }
         }
