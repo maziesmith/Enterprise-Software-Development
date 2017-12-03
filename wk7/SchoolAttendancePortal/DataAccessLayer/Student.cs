@@ -22,7 +22,7 @@ namespace DataAccessLayer
             SG, //Singapore
         }
 
-        private readonly String CONNECTION_STRING = "";
+        private readonly String CONNECTION_STRING = Properties.Settings.Default.DBConnStr;
         public String AdminNumber { get; set; }
         public String Name { get; set; }
         public String Gender { get; set; }
