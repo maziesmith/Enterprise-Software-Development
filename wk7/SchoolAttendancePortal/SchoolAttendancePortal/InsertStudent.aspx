@@ -82,8 +82,8 @@
             </tr>
             <tr>
                 <td colspan="3">
-                    <asp:Button ID="okButton" runat="server" Text="Ok" Width="100px" />
-&nbsp;<asp:Button ID="clearButton" runat="server" Text="Clear" Width="100px" />
+                    <asp:Button ID="okButton" runat="server" Text="Ok" Width="100px" OnClick="okButton_Click" />
+&nbsp;<asp:Button ID="clearButton" runat="server" Text="Clear" Width="100px" OnClick="clearButton_Click" />
                 </td>
             </tr>
         </table>
