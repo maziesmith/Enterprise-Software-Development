@@ -22,6 +22,71 @@ namespace DataAccessLayer
             SG, //Singapore
         }
 
+        public static Nationality strToNat(string s)
+        {
+            Nationality citizenship = Nationality.SG;
+            switch (s)
+            {
+                case "BD":
+                    citizenship = Nationality.BD;
+                    break;
+                case "CA":
+                    citizenship = Nationality.CA;
+                    break;
+                case "CN":
+                    citizenship = Nationality.CN;
+                    break;
+                case "HK":
+                    citizenship = Nationality.HK;
+                    break;
+                case "ID":
+                    citizenship = Nationality.ID;
+                    break;
+                case "JP":
+                    citizenship = Nationality.JP;
+                    break;
+                case "MY":
+                    citizenship = Nationality.MY;
+                    break;
+                case "SG":
+                    citizenship = Nationality.SG;
+                    break;
+            }
+        }
+        
+        public static string natToStr(Nationality nat)
+        {
+            string citizenship = "SG";
+            switch (nat)
+            {
+                case Nationality.BD:
+                    citizenship = "BD";
+                    break;
+                case Nationality.CA:
+                    citizenship = "CA";
+                    break;
+                case Nationality.CN:
+                    citizenship = "CN";
+                    break;
+                case Nationality.HK:
+                    citizenship = "HK";
+                    break;
+                case Nationality.ID:
+                    citizenship = "ID";
+                    break;
+                case Nationality.JP:
+                    citizenship = "JP";
+                    break;
+                case Nationality.MY:
+                    citizenship = "MY";
+                    break;
+                case Nationality.SG:
+                    citizenship = "SG";
+                    break;
+            }
+            return citizenship;
+        }
+
         private readonly String CONNECTION_STRING = Properties.Settings.Default.DBConnStr;
         public String AdminNumber { get; set; }
         public String Name { get; set; }
