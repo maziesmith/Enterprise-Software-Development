@@ -52,6 +52,7 @@ namespace DataAccessLayer
                     citizenship = Nationality.SG;
                     break;
             }
+            return citizenship;
         }
         
         public static string natToStr(Nationality nat)
@@ -160,34 +161,7 @@ namespace DataAccessLayer
                             student.Gender = dataReader["Gender"].ToString();
                             student.DateOfBirth = DateTime.Parse(dataReader["DOB"].ToString());
                             student.Address = dataReader["Address"].ToString();
-                            switch (dataReader["CitizenShip"].ToString())
-                            {
-                                case "BD":
-                                    student.CitizenShip = Student.Nationality.BD;
-                                    break;
-                                case "CA":
-                                    student.CitizenShip = Student.Nationality.CA;
-                                    break;
-                                case "CN":
-                                    student.CitizenShip = Student.Nationality.CN;
-                                    break;
-                                case "HK":
-                                    student.CitizenShip = Student.Nationality.HK;
-                                    break;
-                                case "ID":
-                                    student.CitizenShip = Student.Nationality.ID;
-                                    break;
-                                case "JP":
-                                    student.CitizenShip = Student.Nationality.JP;
-                                    break;
-                                case "MY":
-                                    student.CitizenShip = Student.Nationality.MY;
-                                    break;
-                                case "SG":
-                                    student.CitizenShip = Student.Nationality.SG;
-                                    break;
-                            }
-
+                            student.CitizenShip = strToNat(dataReader["CitizenShip"].ToString());
                             student.MobileNumber = dataReader["Mobile"].ToString();
                             student.SchoolEmail = dataReader["Email"].ToString();
                             student.ImageURL = dataReader["ImageURL"].ToString();
@@ -207,7 +181,33 @@ namespace DataAccessLayer
         public List<Student> GetAllStudents()
         {
             //Delete the following and add your implementation here
-            throw new NotImplementedException();
+            string query = "SELECT * FROM Student";
+            List<Student> students = new List<Student>();
+            using (SqlConnection conn = new SqlConnection(CONNECTION_STRING))
+            {
+                using (SqlCommand comm = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    SqlDataReader reader = comm.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Student student = new Student();
+                        student.AdminNumber = reader["AdminNumber"].ToString();
+                        student.Name = reader["Name"].ToString();
+                        student.Gender = reader["Gender"].ToString();
+                        student.DateOfBirth = Convert.ToDateTime(reader["dob"].ToString());
+                        student.CitizenShip = strToNat(reader["CitizenShip"].ToString());
+                        student.Address = reader["Address"].ToString();
+                        student.MobileNumber = reader["Mobile"].ToString();
+                        student.SchoolEmail = reader["Email"].ToString();
+                        student.ImageURL = reader["ImageUrl"].ToString();
+                        students.Add(student);
+                    }
+                    conn.Close();
+                    reader.Close();
+                }
+            }
+            return students;
         }
     }
 }

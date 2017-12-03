@@ -90,7 +90,7 @@
             </tr>
             <tr>
                 <td colspan="3">
-                    <asp:Button ID="backButton" runat="server" Text="Back" Width="100px" />
+                    <asp:Button ID="backButton" runat="server" Text="Back" Width="100px" OnClick="backButton_Click" />
                 </td>
             </tr>
         </table>
