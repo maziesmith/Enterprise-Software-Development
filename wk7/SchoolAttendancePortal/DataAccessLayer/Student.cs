@@ -136,7 +136,19 @@ namespace DataAccessLayer
         public int Delete(String adminNumber)
         {
             //Delete the following and add your implementation here
-            throw new NotImplementedException();
+            String query = "DELETE FROM Student WHERE AdminNumber =@AdminNumber";
+            int rows = 0;
+            using (SqlConnection connection = new SqlConnection(CONNECTION_STRING))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@AdminNumber", adminNumber);
+                    connection.Open();
+                    rows = command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            return rows;
         }
 
         public Student GetStudent(String adminNumber)
