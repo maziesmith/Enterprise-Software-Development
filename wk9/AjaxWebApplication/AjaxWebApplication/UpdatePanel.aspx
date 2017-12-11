@@ -19,7 +19,7 @@
             <br />
             <asp:Label ID="Label4" runat="server" Font-Bold="True" Text="Outside Update Panel"></asp:Label>
             <br />
-            <asp:Button ID="btnOutsideUpdatePanel" runat="server" Text="Outside Update Panel" />
+            <asp:Button ID="btnOutsideUpdatePanel" runat="server" Text="Outside Update Panel" OnClick="btnOutsideUpdatePanel_Click" />
             <br />
             <asp:Label ID="lblOutsideUpdatePanel" runat="server"></asp:Label>
             <br />
@@ -27,7 +27,7 @@
             <asp:Label ID="Label6" runat="server" Font-Bold="True" Text="Update Panel "></asp:Label>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
-                    <asp:Button ID="btnUpdatePanel" runat="server" Text="Inside Update Panel" />
+                    <asp:Button ID="btnUpdatePanel" runat="server" Text="Inside Update Panel" OnClick="btnUpdatePanel_Click" />
                     <br />
                     <br />
                     <asp:Label ID="lblInsideUpdatePanel" runat="server"></asp:Label>

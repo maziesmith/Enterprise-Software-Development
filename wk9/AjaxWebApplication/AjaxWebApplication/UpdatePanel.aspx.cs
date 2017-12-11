@@ -11,17 +11,17 @@ namespace AjaxWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.lblPageLoad.Text = DateTime.Now.ToString();
         }
 
         protected void btnOutsideUpdatePanel_Click(object sender, EventArgs e)
         {
-
+            this.lblOutsideUpdatePanel.Text = DateTime.Now.ToString();
         }
 
         protected void btnUpdatePanel_Click(object sender, EventArgs e)
         {
-
+            this.lblInsideUpdatePanel.Text = DateTime.Now.ToString();
         }
     }
 }
