@@ -13,5 +13,15 @@ namespace AjaxWebApplication
         {
 
         }
+
+        protected void btnOutsideUpdatePanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnUpdatePanel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

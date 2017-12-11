@@ -12,9 +12,28 @@
             <asp:ScriptManager ID="ScriptManager1" runat="server">
             </asp:ScriptManager>
             <br />
+            <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="Page Load "></asp:Label>
+            <br />
+            <asp:Label ID="lblPageLoad" runat="server"></asp:Label>
+            <br />
+            <br />
+            <asp:Label ID="Label4" runat="server" Font-Bold="True" Text="Outside Update Panel"></asp:Label>
+            <br />
+            <asp:Button ID="btnOutsideUpdatePanel" runat="server" Text="Outside Update Panel" />
+            <br />
+            <asp:Label ID="lblOutsideUpdatePanel" runat="server"></asp:Label>
+            <br />
+            <br />
+            <asp:Label ID="Label6" runat="server" Font-Bold="True" Text="Update Panel "></asp:Label>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                <ContentTemplate></ContentTemplate>
+                <ContentTemplate>
+                    <asp:Button ID="btnUpdatePanel" runat="server" Text="Inside Update Panel" />
+                    <br />
+                    <br />
+                    <asp:Label ID="lblInsideUpdatePanel" runat="server"></asp:Label>
+                </ContentTemplate>
             </asp:UpdatePanel>
+            <br />
         </div>
     </form>
 </body>
