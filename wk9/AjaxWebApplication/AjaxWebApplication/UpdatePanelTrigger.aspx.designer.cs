@@ -40,6 +40,15 @@ namespace AjaxWebApplication {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
         /// btnUpdateBoth control.
         /// </summary>
         /// <remarks>
@@ -58,30 +67,39 @@ namespace AjaxWebApplication {
         protected global::System.Web.UI.WebControls.Button btnUpdateThis;
         
         /// <summary>
-        /// lbllabel1 control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbllabel1;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// lbllabel2 control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbllabel2;
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// lbllabel3 control.
+        /// UpdatePanel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbllabel3;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
+        
+        /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
     }
 }

@@ -11,21 +11,29 @@
         <div>
             <asp:ScriptManager ID="ScriptManager1" runat="server">
             </asp:ScriptManager>
+           
             <br />
-            <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Update Panel 1 "></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Update Panel 1 "></asp:Label>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <asp:Button ID="btnUpdateBoth" runat="server" OnClick="btnUpdateBoth_Click" Text="Update Both" />
+                    &nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="btnUpdateThis" runat="server" OnClick="btnUpdateThis_Click" Text="Update This" />
+                    <br />
+                    <asp:Label ID="Label2" runat="server"></asp:Label>
+                </ContentTemplate>
+            </asp:UpdatePanel>
             <br />
-            <br />
-            <asp:Button ID="btnUpdateBoth" runat="server" Text="Update Both" />
-&nbsp;&nbsp;
-            <asp:Button ID="btnUpdateThis" runat="server" Text="Update This" />
-            <br />
-            <br />
-            <asp:Label ID="lbllabel1" runat="server"></asp:Label>
-            <br />
-            <br />
-            <asp:Label ID="lbllabel2" runat="server" Font-Bold="True">Update Panel 2</asp:Label>
-            <br />
-            <asp:Label ID="lbllabel3" runat="server"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Text="Update Panel 2"></asp:Label>
+            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                <ContentTemplate>
+                    <asp:Label ID="Label4" runat="server"></asp:Label>
+                </ContentTemplate>
+                <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="btnUpdateBoth" EventName="Click" />
+                </Triggers>
+            </asp:UpdatePanel>
+           
         </div>
     </form>
 </body>

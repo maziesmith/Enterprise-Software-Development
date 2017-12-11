@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="UpdatePanel.aspx" />
+    <Content Include="UpdatePanelTrigger.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +87,13 @@
     </Compile>
     <Compile Include="UpdatePanel.aspx.designer.cs">
       <DependentUpon>UpdatePanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePanelTrigger.aspx.cs">
+      <DependentUpon>UpdatePanelTrigger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdatePanelTrigger.aspx.designer.cs">
+      <DependentUpon>UpdatePanelTrigger.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

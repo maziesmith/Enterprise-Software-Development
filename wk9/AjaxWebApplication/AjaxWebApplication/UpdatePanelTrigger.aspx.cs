@@ -13,5 +13,16 @@ namespace AjaxWebApplication
         {
 
         }
+
+        protected void btnUpdateBoth_Click(object sender, EventArgs e)
+        {
+            this.Label2.Text = DateTime.Now.ToString("dd-MMM-yyyy hh:mm:ss");
+            this.Label4.Text = DateTime.Now.ToString("dd-MMM-yyyy hh:mm:ss");
+        }
+
+        protected void btnUpdateThis_Click(object sender, EventArgs e)
+        {
+            this.Label2.Text = DateTime.Now.ToString("dd-MMM-yyyy hh:mm:ss");
+        }
     }
 }
